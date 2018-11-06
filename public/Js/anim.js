@@ -10,10 +10,19 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
+    function getDuration(target) {
+        var currentTop = $(window).scrollTop(),
+            rate = 0.5,
+            distance = Math.abs(currentTop - target);
+        return distance * rate;
+    }
+
     $("#arrow").on('click', function () {
-        var position = $(".up").offset().top;
+        var bottom = $(document).height() - $(window).height();
+        var duration = getDuration(bottom);
+
         $("HTML, BODY").animate({
-            scrollTop: position
-        }, 500);
+            scrollTop: bottom
+        }, duration);
     });
 });
