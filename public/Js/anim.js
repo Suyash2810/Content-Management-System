@@ -12,7 +12,7 @@ $(document).ready(function () {
 
     function getDuration(target) {
         var currentTop = $(window).scrollTop(),
-            rate = 0.5,
+            rate = 0.8,
             distance = Math.abs(currentTop - target);
         return distance * rate;
     }

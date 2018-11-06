@@ -28,6 +28,11 @@
     color: white;
 }
 
-html {
-    scroll-behavior: smooth;
+#heading_cms {
+    transition: transform 1s;
+}
+
+#heading_cms:hover {
+    transform: scale(1.05);
+    color: lightgrey;
 }
