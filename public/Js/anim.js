@@ -18,7 +18,7 @@ $(document).ready(function () {
     }
 
     $("#arrow").on('click', function () {
-        var bottom = $(document).height() - $(window).height();
+        var bottom = $('.up').offset().top;
         var duration = getDuration(bottom);
 
         $("HTML, BODY").animate({
