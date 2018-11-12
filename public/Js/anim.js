@@ -26,3 +26,16 @@ $(document).ready(function () {
         }, duration);
     });
 });
+
+window.onload = function () {
+
+    var elem = document.querySelector('#tech_heading');
+
+    elem.addEventListener('mouseover', () => {
+        var obj = anime({
+            targets: '#tech_heading',
+            scale: 1.2
+        });
+
+    });
+}
