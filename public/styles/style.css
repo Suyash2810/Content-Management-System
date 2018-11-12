@@ -26,6 +26,7 @@
 
 #arrow a {
     color: white;
+    text-decoration: none;
 }
 
 #heading_cms {
@@ -35,4 +36,15 @@
 #heading_cms:hover {
     transform: scale(1.05);
     color: lightgrey;
+}
+
+#main_well {
+    background-color: transparent;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: lightgrey;
+    font-size: 26px;
+    background-image: url('../imgs/woodbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
