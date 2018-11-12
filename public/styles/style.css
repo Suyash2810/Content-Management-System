@@ -42,9 +42,13 @@
     background-color: transparent;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    color: lightgrey;
-    font-size: 26px;
+    color: white;
+    font-size: 46px;
     background-image: url('../imgs/woodbg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+#tech_heading:hover {
+    color: lightgray;
 }
