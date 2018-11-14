@@ -68,3 +68,21 @@
 .well {
     background-color: transparent;
 }
+
+#center_anim {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: solid 1px lightgrey;
+    border-radius: 40px;
+    font-size: 14px;
+    position: relative;
+    text-align: center;
+    display: inline-table;
+    margin-top: 80%;
+}
+
+#cernter_anim_inner {
+    display: table-cell;
+    vertical-align: middle;
+}
