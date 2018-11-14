@@ -79,7 +79,8 @@
     position: relative;
     text-align: center;
     display: inline-table;
-    margin-top: 80%;
+    top: 300px;
+    font-weight: bold;
 }
 
 #cernter_anim_inner {

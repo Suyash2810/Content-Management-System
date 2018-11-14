@@ -38,4 +38,37 @@ window.onload = function () {
         });
 
     });
+
+    var centerDiv = document.getElementById('center_anim');
+
+    centerDiv.addEventListener('click', moveUp);
+
+    function moveUp() {
+        var object = anime({
+            targets: '#center_anim',
+            translateY: {
+                value: '-300px',
+                duration: 1000,
+                delay: 100,
+                easing: 'easeInOutSine'
+            },
+            borderRadius: {
+                value: ['40px', '0px'],
+                duration: 1200,
+                easing: 'easeInOutSine'
+            },
+            width: {
+                value: '+=80px',
+                duration: 2000,
+                delay: 100,
+                easing: 'easeInOutSine'
+            },
+            height: {
+                value: '-=50px',
+                duration: 2500,
+                delay: 100,
+                easing: 'easeInOutSine'
+            }
+        });
+    }
 }
