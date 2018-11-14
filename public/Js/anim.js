@@ -43,7 +43,7 @@ window.onload = function () {
 
     centerDiv.addEventListener('click', moveUp);
 
-    function moveUp() {
+    function moveUp(e) {
         var object = anime({
             targets: '#center_anim',
             translateY: {
@@ -58,7 +58,7 @@ window.onload = function () {
                 easing: 'easeInOutSine'
             },
             width: {
-                value: '+=80px',
+                value: '+=120px',
                 duration: 2000,
                 delay: 100,
                 easing: 'easeInOutSine'
@@ -70,5 +70,12 @@ window.onload = function () {
                 easing: 'easeInOutSine'
             }
         });
+
+        e.target.innerText = '';
+
+        setTimeout(function () {
+            e.target.innerText = 'Welcome to the Panel.';
+        }, 3000);
+
     }
 }
