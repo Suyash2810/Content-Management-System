@@ -77,5 +77,10 @@ window.onload = function () {
             e.target.innerText = 'Welcome to the Panel.';
         }, 3000);
 
+        var panel = document.getElementById('hidden_info');
+        setTimeout(function () {
+            panel.style.display = 'block';
+        }, 1000);
+
     }
 }
