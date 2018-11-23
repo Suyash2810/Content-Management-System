@@ -92,3 +92,15 @@
     display: none;
     margin-top: 50%;
 }
+
+#list {
+    font-size: 24px;
+    text-align: left;
+    margin-top: 10%;
+    line-height: 40px;
+}
+
+#list ul li a {
+    color: white;
+    text-decoration: none;
+}
