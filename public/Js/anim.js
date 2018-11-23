@@ -83,4 +83,25 @@ window.onload = function () {
         }, 1000);
 
     }
+
+    document.querySelector('.display2').addEventListener('mouseover', function () {
+
+        var obb = anime({
+            targets: '.display2',
+            scale: 1.2,
+            duration: 1000,
+            delay: 500
+        });
+
+    });
+
+    document.querySelector('.display2').addEventListener('mouseout', function () {
+
+        var obB = anime({
+            targets: '.display2',
+            scale: 1.0,
+            duration: 1000,
+            delay: 500
+        });
+    });
 }
