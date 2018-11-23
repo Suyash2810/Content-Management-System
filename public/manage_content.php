@@ -20,6 +20,20 @@
 ?>
 <?php require_once('../Includes/functions.php'); ?>
 <?php include('../Includes/templates/header.php'); ?>
+
+<?php 
+    $query = "SELECT * ";
+    $query .= "FROM subjects ";
+    $query .= "WHERE visible = 1 ";
+    $query .= "ORDER BY position ASC";
+    //Querying the database
+    $result = mysqli_query($connection,$query);
+
+    if(!$result)
+    {
+        die("Querying the database failed.");
+    }
+?>
     <div class="container-fluid">
         <div class="well" id="main_well">
             <div class="row">
