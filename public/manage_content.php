@@ -54,8 +54,22 @@
                                 </div>
                             </div>
                             <div id="hidden_info">
-                                <div>
-                                    Info
+                                <div class="text-left">
+                                    <ul class="list-data">
+                                        <?php 
+                                            while($key = mysqli_fetch_assoc($result))
+                                            {                 
+                                        ?>   
+
+                                        <li>
+                                                <?php 
+                                                    echo $key["menu_name"] . "  (" . $key["id"] . ")" ;
+                                                ?>
+                                        </li>     
+                                            <?php } ?>              
+                                    </ul>
+
+                                    <?php mysqli_free_result($result);?>
                                 </div>
                             </div>
                         </div>
@@ -78,3 +92,4 @@
         </div>
     </div>
 <?php include('../Includes/templates/footer.php') ?>
+<?php mysqli_close($connection);?>

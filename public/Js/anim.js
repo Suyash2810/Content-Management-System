@@ -40,7 +40,6 @@ window.onload = function () {
     });
 
     var centerDiv = document.getElementById('center_anim');
-
     centerDiv.addEventListener('click', moveUp);
 
     function moveUp(e) {
@@ -82,6 +81,7 @@ window.onload = function () {
             panel.style.display = 'block';
         }, 1000);
 
+        centerDiv.removeEventListener('click', moveUp);
     }
 
     document.querySelector('.display2').addEventListener('mouseover', function () {
