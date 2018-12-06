@@ -24,7 +24,7 @@
     function get_pages($page_id){
         global $connection;
 
-        $query_list = "SELECT menu_name ";
+        $query_list = "SELECT * ";
         $query_list .= "FROM pages ";
         $query_list .= "WHERE visible = 1 ";
         $query_list .= "AND subject_id = {$page_id} ";

@@ -35,9 +35,10 @@
                                         ?>   
 
                                         <li>
-                                                <?php 
-                                                    echo $key["menu_name"] ;
-                                                ?>
+                                                <a href="manage_content.php?subject=<?php echo urlencode($key["id"]) ;?>" 
+                                                style="color:white;text-decoration:none;"
+                                                ><?php echo $key["menu_name"] ;?></a>        
+
                                                 <?php 
                                                     $result_list = get_pages($key["id"]);
 
@@ -48,8 +49,9 @@
                                                         <?php 
                                                              while($list_item = mysqli_fetch_assoc($result_list)){
                                                              ?>
-                                                              <a href="#" style="color:white;text-decoration:none;"
-                                                              id="inner_links"><?php  echo $list_item['menu_name'];?></a>
+                                                              <a href="manage_content.php?page=<?php echo urlencode($list_item["id"]) ;?>" 
+                                                              style="color:white;text-decoration:none;"
+                                                              id="inner_links"><?php  echo $list_item['menu_name'] ;?></a>
                                                               <br>
 
                                                              <?php } ?>
