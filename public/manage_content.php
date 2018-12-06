@@ -43,6 +43,26 @@
                                                 <?php 
                                                     echo $key["menu_name"] . "  (" . $key["id"] . ")" ;
                                                 ?>
+                                                <?php 
+                                                    $query_list = "SELECT menu_name ";
+                                                    $query_list .= "FROM pages ";
+                                                    $query_list .= "WHERE visible = 1 ";
+                                                    $query_list .= "AND subject_id = {$key["id"]} ";
+                                                    $query_list .= "ORDER BY position ASC";
+                                                    $result_list = mysqli_query($connection,$query_list);
+
+                                                    check_queryStatus($result_list);
+                                                ?>
+                                                <ul id="inner_list">
+                                                    <li>
+                                                        <?php 
+                                                             while($list_item = mysqli_fetch_assoc($result_list)){
+                                                                 echo $list_item['menu_name'] . "<br>" ;
+                                                             }
+                                                        ?>
+                                                    </li>
+                                                </ul>
+                                                <?php mysqli_free_result($result_list);?>
                                         </li>     
                                             <?php } ?>              
                                     </ul>
