@@ -3,13 +3,8 @@
 <?php include('../Includes/templates/header.php'); ?>
 
 <?php 
-    $query = "SELECT * ";
-    $query .= "FROM subjects ";
-    $query .= "WHERE visible = 1 ";
-    $query .= "ORDER BY position ASC";
-    //Querying the database
-    $result = mysqli_query($connection,$query);
 
+    $result = get_subjects();
     check_queryStatus($result);
 ?>
     <div class="container-fluid">
@@ -41,7 +36,7 @@
 
                                         <li>
                                                 <?php 
-                                                    echo $key["menu_name"] . "  (" . $key["id"] . ")" ;
+                                                    echo $key["menu_name"] ;
                                                 ?>
                                                 <?php 
                                                     $query_list = "SELECT menu_name ";
