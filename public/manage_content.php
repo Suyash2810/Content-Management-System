@@ -47,9 +47,12 @@
                                                     <li>
                                                         <?php 
                                                              while($list_item = mysqli_fetch_assoc($result_list)){
-                                                                 echo $list_item['menu_name'] . "<br>" ;
-                                                             }
-                                                        ?>
+                                                             ?>
+                                                              <a href="#" style="color:white;text-decoration:none;"
+                                                              id="inner_links"><?php  echo $list_item['menu_name'];?></a>
+                                                              <br>
+
+                                                             <?php } ?>
                                                     </li>
                                                 </ul>
                                                 <?php mysqli_free_result($result_list);?>
@@ -80,3 +83,4 @@
         </div>
     </div>
 <?php include('../Includes/templates/footer.php') ?>
+<?php mysqli_close($connection);?>

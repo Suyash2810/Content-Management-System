@@ -114,4 +114,6 @@
 
 #inner_list {
     list-style-type: none;
+    color: white;
+    text-decoration: none;
 }
