@@ -10,10 +10,7 @@
     //Querying the database
     $result = mysqli_query($connection,$query);
 
-    if(!$result)
-    {
-        die("Querying the database failed.");
-    }
+    check_queryStatus($result);
 ?>
     <div class="container-fluid">
         <div class="well" id="main_well">
@@ -73,4 +70,3 @@
         </div>
     </div>
 <?php include('../Includes/templates/footer.php') ?>
-<?php mysqli_close($connection);?>
