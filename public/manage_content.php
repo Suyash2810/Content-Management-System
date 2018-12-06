@@ -39,12 +39,7 @@
                                                     echo $key["menu_name"] ;
                                                 ?>
                                                 <?php 
-                                                    $query_list = "SELECT menu_name ";
-                                                    $query_list .= "FROM pages ";
-                                                    $query_list .= "WHERE visible = 1 ";
-                                                    $query_list .= "AND subject_id = {$key["id"]} ";
-                                                    $query_list .= "ORDER BY position ASC";
-                                                    $result_list = mysqli_query($connection,$query_list);
+                                                    $result_list = get_pages($key["id"]);
 
                                                     check_queryStatus($result_list);
                                                 ?>
