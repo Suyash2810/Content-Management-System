@@ -67,4 +67,25 @@
             return null;
         }
     }
+
+    function get_selected_subject_page(){
+        global $clicked_subject_id;
+        global $clicked_page_id;
+
+        if(isset($_GET["subject"]))
+        {
+            $clicked_subject_id = $_GET["subject"];
+            $clicked_page_id = null;
+        }
+        elseif(isset($_GET["page"]))
+        {
+            $clicked_page_id = $_GET["page"];
+            $clicked_subject_id = null;
+        }
+        else
+        {
+            $clicked_subject_id = null;
+            $clicked_page_id = null;
+        }
+    }
 ?>
