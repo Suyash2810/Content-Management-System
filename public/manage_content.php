@@ -96,7 +96,11 @@
                                     <?php 
                                         if(isset($clicked_subject_id)){
                                             $output_result = get_oneSubject_by_id($clicked_subject_id);
-                                            
+                                            ?>
+                                            <p class="text-center">
+                                               Menu Name : <?php echo $output_result["menu_name"]?>
+                                            </p>
+                                        <?php
                                         } elseif(isset($clicked_page_id)){
                                             echo $clicked_page_id;
                                         }else{

@@ -37,13 +37,17 @@
     function get_oneSubject_by_id($subject_id_clicked){
         global $connection;
 
+        $safe_subject_clicked_id = mysqli_real_escape_string($connection,$subject_id_clicked);
         $query = "SELECT * ";
         $query .= "FROM subjects ";
-        $query .= "WHERE id = {$subject_id_clicked} ";
+        $query .= "WHERE id = {$safe_subject_clicked_id} ";
         $query .= "LIMIT 1";
         //Querying the database
         $result = mysqli_query($connection,$query);
         $result_subject = mysqli_fetch_assoc($result);
+        if($result_subject){
         return $result_subject;
+        }else
+        {return null;}
     }
 ?>
