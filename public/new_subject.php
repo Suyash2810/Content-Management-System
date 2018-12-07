@@ -146,7 +146,7 @@
                                                                     <label for="create">Cancel </label>
                                                                     </div>
                                                                     <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4">
-                                                                        <a href="#" class="btn btn-block btn-default" style="background-color:transparent;color:white;">Cancel</a>
+                                                                        <a href="./manage_content.php" class="btn btn-block btn-default" style="background-color:transparent;color:white;">Cancel</a>
                                                                     </div>
                                                                 </div>
                                                          </div> 
