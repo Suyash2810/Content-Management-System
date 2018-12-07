@@ -108,18 +108,20 @@
                                                                     <div class="col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-2 col-xs-offset-1">
                                                                     <label for="name">Visible :</label>
                                                                     </div>
-                                                                    <div class="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1" style="background-color:blue;">
+                                                                    <div class="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
                                                                         <div class="row">
-                                                                            <div class="col-md-6" style="background-color:pink;">
+                                                                            <div class="col-md-6 col-sm-6 col-xs-6">
                                                                                 <div class="row">
-                                                                                    <div class="col-md-6 col-sm-4 col-xs-4" style="background-color:cyan;">Yes :</div>
-                                                                                    <div class="col-md-4 col-md-offset-1 col-sm-2 col-xs-2" style="background-color:red;"><input type="radio" name="radio_button"></div>
+                                                                                    <div class="col-md-6 col-sm-6 col-xs-6">Yes :</div>
+                                                                                    <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1">
+                                                                                    <input type="radio" name="radio_button"></div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="col-md-6" style="background-color:orange;">
+                                                                            <div class="col-md-6 col-sm-6 col-xs-6">
                                                                                 <div class="row">
-                                                                                    <div class="col-md-6 col-sm-4 col-xs-4" style="background-color:cyan;">No :</div>
-                                                                                    <div class="col-md-4 col-md-offset-1 col-sm-2 col-xs-2" style="background-color:red;"><input type="radio" name="radio_button"></div>
+                                                                                    <div class="col-md-6 col-sm-6 col-xs-6">No :</div>
+                                                                                    <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1">
+                                                                                    <input type="radio" name="radio_button"></div>
                                                                                 </div>
                                                                         </div>
                                                                     </div>
