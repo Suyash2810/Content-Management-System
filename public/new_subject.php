@@ -87,7 +87,18 @@
                                                                     <label for="name">Name :</label>
                                                                     </div>
                                                                     <div class="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
-                                                                        <input type="text" class="form-control" name="menu_name" style="background-color:transparent;">
+                                                                        <input type="text" class="form-control" name="menu_name" style="background-color:transparent;color:white;">
+                                                                    </div>
+                                                                </div>
+                                                         </div>
+
+                                                         <div class="row">
+                                                                <div class="form-group">
+                                                                    <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1">
+                                                                    <label for="name">Position :</label>
+                                                                    </div>
+                                                                    <div class="col-md-4  col-sm-4  col-xs-4">
+                                                                        <input type="number" class="form-control" name="position" style="background-color:transparent;color:white;">
                                                                     </div>
                                                                 </div>
                                                          </div>       
