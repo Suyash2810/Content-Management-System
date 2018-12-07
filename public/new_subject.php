@@ -75,8 +75,26 @@
                             <div class="col-md-8 col-md-offset-2">
                                 <h2>Manage Content</h2>
                                 <h4 style="margin-top:5%;">Add new subject.</h4>
+                                <br>
                                 <div id="list">
-                                        
+                                        <div class="well">
+                                            <div class="row">
+                                                <div class="col-md-12" id="form_data">
+                                                    <form action="new_subject.php" method="post">
+                                                         <div class="row">
+                                                                <div class="form-group">
+                                                                    <div class="col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-2 col-xs-offset-1">
+                                                                    <label for="name">Name :</label>
+                                                                    </div>
+                                                                    <div class="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
+                                                                        <input type="text" class="form-control" name="menu_name" style="background-color:transparent;">
+                                                                    </div>
+                                                                </div>
+                                                         </div>       
+                                                    </form>
+                                                </div>                
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
