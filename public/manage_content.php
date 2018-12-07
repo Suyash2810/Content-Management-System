@@ -60,7 +60,12 @@
                                                 </ul>
                                                 <?php mysqli_free_result($result_list);?>
                                         </li>     
-                                            <?php } ?>              
+                                            <?php } ?> 
+
+                                            <br>
+
+                                            <li><a href="./new_subject.php" style="color:white;text-decoration:none;
+                                            "> + Add new subject</a></li>             
                                     </ul>
 
                                     <?php mysqli_free_result($result);?>
