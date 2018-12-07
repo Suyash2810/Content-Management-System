@@ -33,4 +33,17 @@
 
         return $result_list;
     }
+
+    function get_oneSubject_by_id($subject_id_clicked){
+        global $connection;
+
+        $query = "SELECT * ";
+        $query .= "FROM subjects ";
+        $query .= "WHERE id = {$subject_id_clicked} ";
+        $query .= "LIMIT 1";
+        //Querying the database
+        $result = mysqli_query($connection,$query);
+        $result_subject = mysqli_fetch_assoc($result);
+        return $result_subject;
+    }
 ?>

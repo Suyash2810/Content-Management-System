@@ -95,7 +95,8 @@
                                 <div id="list">
                                     <?php 
                                         if(isset($clicked_subject_id)){
-                                            echo clicked_subject_id;
+                                            $output_result = get_oneSubject_by_id($clicked_subject_id);
+                                            
                                         } elseif(isset($clicked_page_id)){
                                             echo $clicked_page_id;
                                         }else{
