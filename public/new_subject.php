@@ -84,7 +84,7 @@
                                                          <div class="row">
                                                                 <div class="form-group">
                                                                     <div class="col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-2 col-xs-offset-1">
-                                                                    <label for="name">Name :</label>
+                                                                    <label for="name">Name </label>
                                                                     </div>
                                                                     <div class="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
                                                                         <input type="text" class="form-control" name="menu_name" style="background-color:transparent;color:white;">
@@ -95,7 +95,7 @@
                                                          <div class="row">
                                                                 <div class="form-group">
                                                                     <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1">
-                                                                    <label for="name">Position :</label>
+                                                                    <label for="name">Position </label>
                                                                     </div>
                                                                     <div class="col-md-4  col-sm-4  col-xs-4">
                                                                         <input type="number" class="form-control" name="position" style="background-color:transparent;color:white;">
@@ -106,27 +106,50 @@
                                                          <div class="row">
                                                                 <div class="form-group">
                                                                     <div class="col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-2 col-xs-offset-1">
-                                                                    <label for="name">Visible :</label>
+                                                                    <label for="name">Visible </label>
                                                                     </div>
                                                                     <div class="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
                                                                         <div class="row">
                                                                             <div class="col-md-6 col-sm-6 col-xs-6">
                                                                                 <div class="row">
-                                                                                    <div class="col-md-6 col-sm-6 col-xs-6">Yes :</div>
+                                                                                    <div class="col-md-6 col-sm-6 col-xs-6">Yes </div>
                                                                                     <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1">
                                                                                     <input type="radio" name="radio_button"></div>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6 col-sm-6 col-xs-6">
                                                                                 <div class="row">
-                                                                                    <div class="col-md-6 col-sm-6 col-xs-6">No :</div>
+                                                                                    <div class="col-md-6 col-sm-6 col-xs-6">No </div>
                                                                                     <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1">
                                                                                     <input type="radio" name="radio_button"></div>
                                                                                 </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                         </div>      
+                                                         </div>  
+                                                            <br>
+                                                            <hr>
+                                                            <div class="row">
+                                                                <div class="form-group">
+                                                                    <div class="col-md-2 col-md-offset-2 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1">
+                                                                    <label for="create">Create </label>
+                                                                    </div>
+                                                                    <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4">
+                                                                        <input type="submit" class="form-control" name="position" style="background-color:transparent;color:white;">
+                                                                    </div>
+                                                                </div>
+                                                         </div> 
+
+                                                         <div class="row">
+                                                                <div class="form-group">
+                                                                    <div class="col-md-2 col-md-offset-2 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1">
+                                                                    <label for="create">Cancel </label>
+                                                                    </div>
+                                                                    <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4">
+                                                                        <a href="#" class="btn btn-block btn-default" style="background-color:transparent;color:white;">Cancel</a>
+                                                                    </div>
+                                                                </div>
+                                                         </div> 
                                                     </form>
                                                 </div>                
                                             </div>
