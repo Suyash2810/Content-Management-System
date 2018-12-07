@@ -98,8 +98,14 @@
                                             echo clicked_subject_id;
                                         } elseif(isset($clicked_page_id)){
                                             echo $clicked_page_id;
-                                        }
-                                    ?>
+                                        }else{
+                                          ?>
+                                            <h4 class="display-4 text-center">
+                                                <?php 
+                                                    echo "Please select page from the panel.";
+                                                ?>
+                                            </h4>  
+                                        <?php } ?>
                                 </div>
                             </div>
                         </div>
