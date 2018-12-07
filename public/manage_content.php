@@ -102,7 +102,16 @@
                                             </p>
                                         <?php
                                         } elseif(isset($clicked_page_id)){
-                                            echo $clicked_page_id;
+                                           $output_result_page = get_onePgae_by_id($clicked_page_id);
+                                           ?>
+                                                <p class="text-center">
+                                                    Page Name : <?php echo $output_result_page["menu_name"]?>
+                                                    <br>
+                                                    <br>
+                                                    Brief Content : <?php echo $output_result_page["content"] ?>
+
+                                                </p>
+                                        <?php
                                         }else{
                                           ?>
                                             <h4 class="display-4 text-center">

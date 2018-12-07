@@ -50,4 +50,21 @@
         }else
         {return null;}
     }
+
+    function get_onePgae_by_id($page_id_clicked){
+        global $connection;
+        
+        $safe_page_clicked_id = mysqli_real_escape_string($connection,$page_id_clicked);
+        $query_list = "SELECT * ";
+        $query_list .= "FROM pages ";
+        $query_list .= "WHERE id = {$safe_page_clicked_id} ";
+        $query_list .= "LIMIT 1";
+        $result_list = mysqli_query($connection,$query_list);
+        $result_list_output = mysqli_fetch_assoc($result_list);
+        if($result_list_output){
+            return $result_list_output;
+        }else{
+            return null;
+        }
+    }
 ?>
