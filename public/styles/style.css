@@ -117,3 +117,13 @@
     color: white;
     text-decoration: none;
 }
+
+#inner_list li a:hover {
+    font-weight: bolder;
+}
+
+@media only screen and (min-width: 768px) {
+    #hidden_info {
+        margin-left: 50px;
+    }
+}

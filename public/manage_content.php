@@ -4,6 +4,24 @@
 
 <?php 
 
+    if(isset($_GET["subject"]))
+    {
+        $clicked_subject_id = $_GET["subject"];
+        $clicked_page_id = null;
+    }
+    elseif(isset($_GET["page"]))
+    {
+        $clicked_page_id = $_GET["page"];
+        $clicked_subject_id = null;
+    }
+    else
+    {
+        $clicked_subject_id = null;
+        $clicked_page_id = null;
+    }
+?>
+
+<?php 
     $result = get_subjects();
     check_queryStatus($result);
 ?>
@@ -75,7 +93,13 @@
                                 <h2>Manage Content</h2>
                                 <h6 style="margin-top:5%;">Welcome to the content management area.</h6>
                                 <div id="list">
-
+                                    <?php 
+                                        if(isset($clicked_subject_id)){
+                                            echo clicked_subject_id;
+                                        } elseif(isset($clicked_page_id)){
+                                            echo $clicked_page_id;
+                                        }
+                                    ?>
                                 </div>
                             </div>
                         </div>
