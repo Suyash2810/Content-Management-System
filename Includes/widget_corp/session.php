@@ -6,10 +6,11 @@
         if($_SESSION["message"]){
         
         $output = "<div class = \"text-center text-capitalize text-bold\" id = \"message_text\">";
-        $output .= $_SESSION["message"];
+        $output .= htmlentities($_SESSION["message"]);
         $output .= "</div>";
         }
 
+        $_SESSION["message"] = null;
         return $output;
     }
 ?>

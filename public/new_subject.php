@@ -1,3 +1,4 @@
+<?php require_once('../Includes/widget_corp/session.php'); ?>
 <?php require_once('../Includes/widget_corp/db_connect.php'); ?>
 <?php require_once('../Includes/functions.php'); ?>
 <?php include('../Includes/templates/header.php'); ?>
@@ -114,6 +115,7 @@
                                                          </div> 
 
                                                          <div class="row">
+                                                             <?php echo message_subject(); ?>
                                                                 <div class="form-group">
                                                                     <div class="col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-2 col-xs-offset-1">
                                                                     <label for="name">Visible </label>
