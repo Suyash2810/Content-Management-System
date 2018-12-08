@@ -80,14 +80,15 @@
                                         <div class="well">
                                             <div class="row">
                                                 <div class="col-md-12" id="form_data">
-                                                    <form action="new_subject.php" method="post">
+                                                    <form action="./create_new_subject.php" method="post">
                                                          <div class="row">
                                                                 <div class="form-group">
                                                                     <div class="col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-2 col-xs-offset-1">
                                                                     <label for="name">Name </label>
                                                                     </div>
                                                                     <div class="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
-                                                                        <input type="text" class="form-control" name="menu_name" style="background-color:transparent;color:white;">
+                                                                        <input type="text" class="form-control" placeholder="Menu Name" name="menu_name"
+                                                                         style="background-color:transparent;color:black;">
                                                                     </div>
                                                                 </div>
                                                          </div>
@@ -123,14 +124,14 @@
                                                                                 <div class="row">
                                                                                     <div class="col-md-6 col-sm-6 col-xs-6">Yes </div>
                                                                                     <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1">
-                                                                                    <input type="radio" name="radio_button"></div>
+                                                                                    <input type="radio" name="radio_button1"></div>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6 col-sm-6 col-xs-6">
                                                                                 <div class="row">
                                                                                     <div class="col-md-6 col-sm-6 col-xs-6">No </div>
                                                                                     <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1">
-                                                                                    <input type="radio" name="radio_button"></div>
+                                                                                    <input type="radio" name="radio_button2"></div>
                                                                                 </div>
                                                                         </div>
                                                                     </div>
@@ -144,7 +145,7 @@
                                                                     <label for="create">Create </label>
                                                                     </div>
                                                                     <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4">
-                                                                        <input type="submit" class="form-control" name="position" style="background-color:transparent;color:white;">
+                                                                        <input type="submit" class="form-control" name="submit" style="background-color:transparent;color:white;">
                                                                     </div>
                                                                 </div>
                                                          </div> 

@@ -1,4 +1,7 @@
-<?php 
+<?php function redirection($redirect_to)
+    {header("Location: " . $redirect_to);
+    exit;}
+
     function check_queryStatus($query_result)
     {
         if(!$query_result)
@@ -86,6 +89,16 @@
         {
             $clicked_subject_id = null;
             $clicked_page_id = null;
+        }
+    }
+
+    function menu_check($name){
+        if(isset($name) && $name !== "")
+        {
+            return true;
+        }
+        else{
+            return false;
         }
     }
 ?>
