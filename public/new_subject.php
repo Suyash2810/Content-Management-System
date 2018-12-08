@@ -100,8 +100,9 @@
                                                                     <div class="col-md-4  col-sm-4  col-xs-4">
                                                                         <select class="form-control" name="position" style="background-color:transparent;color:black;">
                                                                             <?php 
-                                                                                $subject_counter = 6;
-                                                                                for($i = 1; $i<= $subject_counter; $i++)
+                                                                                $subject_assoc_array = get_subjects();
+                                                                                $subject_counter = mysqli_num_rows($subject_assoc_array);
+                                                                                for($i = 1; $i<= $subject_counter+1; $i++)
                                                                                 {
                                                                                     echo "<option value=\"{$i}\" style = \"background-color:transparent;\">{$i}</option>";
                                                                                 }
