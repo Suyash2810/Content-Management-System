@@ -5,7 +5,6 @@
         $errors = [];
         if(isset($_POST['submit']))
         {
-            redirection("manage_content.php");
         }
         else
         {

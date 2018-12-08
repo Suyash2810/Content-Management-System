@@ -124,14 +124,14 @@
                                                                                 <div class="row">
                                                                                     <div class="col-md-6 col-sm-6 col-xs-6">Yes </div>
                                                                                     <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1">
-                                                                                    <input type="radio" name="radio_button1"></div>
+                                                                                    <input type="radio" name="radio_button"></div>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6 col-sm-6 col-xs-6">
                                                                                 <div class="row">
                                                                                     <div class="col-md-6 col-sm-6 col-xs-6">No </div>
                                                                                     <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1">
-                                                                                    <input type="radio" name="radio_button2"></div>
+                                                                                    <input type="radio" name="radio_button"></div>
                                                                                 </div>
                                                                         </div>
                                                                     </div>
