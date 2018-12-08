@@ -1,3 +1,4 @@
+<?php require_once('../Includes/widget_corp/session.php'); ?>
 <?php require_once('../Includes/widget_corp/db_connect.php'); ?>
 <?php require_once('../Includes/functions.php'); ?>
 <?php include('../Includes/templates/header.php'); ?>
@@ -108,6 +109,8 @@
                                                 ?>
                                             </h4>  
                                         <?php } ?>
+
+                                        <?php echo message_subject(); ?>
                                 </div>
                             </div>
                         </div>

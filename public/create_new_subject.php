@@ -1,3 +1,4 @@
+<?php require_once('../Includes/widget_corp/session.php'); ?>
 <?php require_once('../Includes/widget_corp/db_connect.php'); ?>
 <?php require_once('../Includes/functions.php'); ?>
 
@@ -19,9 +20,11 @@
             $result = mysqli_query($connection,$query);
 
             if(!$result){
+                $_SESSION["message"] = "There has been an error! Subject was not created.";
                 redirection("new_subject.php");
             }
             else{
+                $_SESSION["message"] = "Subject was created.";
                 redirection("manage_content.php");
             }
         }
