@@ -98,7 +98,15 @@
                                                                     <label for="name">Position </label>
                                                                     </div>
                                                                     <div class="col-md-4  col-sm-4  col-xs-4">
-                                                                        <input type="number" class="form-control" name="position" style="background-color:transparent;color:white;">
+                                                                        <select class="form-control" name="position" style="background-color:transparent;color:black;">
+                                                                            <?php 
+                                                                                $subject_counter = 6;
+                                                                                for($i = 1; $i<= $subject_counter; $i++)
+                                                                                {
+                                                                                    echo "<option value=\"{$i}\" style = \"background-color:transparent;\">{$i}</option>";
+                                                                                }
+                                                                            ?>
+                                                                        </select>
                                                                     </div>
                                                                 </div>
                                                          </div> 
