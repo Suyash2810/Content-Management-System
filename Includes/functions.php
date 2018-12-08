@@ -101,4 +101,11 @@
             return false;
         }
     }
+
+    function mysql_secure($string){
+        global $connection;
+
+        $secured_string = mysqli_real_escape_string($connection,$string);
+        return $secured_string;
+    }
 ?>
