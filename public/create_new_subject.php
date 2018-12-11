@@ -1,6 +1,7 @@
 <?php require_once('../Includes/widget_corp/session.php'); ?>
 <?php require_once('../Includes/widget_corp/db_connect.php'); ?>
 <?php require_once('../Includes/functions.php'); ?>
+<?php require_once('../Includes/widget_corp/validations.php'); ?>
 
     <?php 
         $errors = [];
@@ -11,6 +12,20 @@
             $menu_name = $_POST["menu_name"];
             $position = (int)$_POST["position"];
             $visible = (int)$_POST["radio_button"];
+
+            //Checking for Validations.
+            $required_fields = array("menu_name","position","radio_button");
+            validate_has_presences($required_fields);
+
+            $max_length_array = array("menu_name" => 20);
+            validate_maximum_length($max_length_array);
+
+            if(!empty($errors))
+            {   $_SESSION["errors"] = $errors;
+                /*Session key will return an associative array of errors encountered which will be displayed
+                on new_subject.php page after redirection.*/
+                redirection("new_subject.php");
+            }
 
             $menu_name = mysql_secure($menu_name);
 

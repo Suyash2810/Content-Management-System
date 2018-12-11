@@ -4,10 +4,10 @@
 
   function has_presence($value)
    {
-    if(isset($value) && $value !=='')
-    {return true;}
-    else
+    if(!isset($value) && $value ==='')
     {return false;}
+    else
+    {return true;}
    }
 
    function has_max_length($value,$max)
@@ -63,8 +63,8 @@
 
        foreach($has_presence_array as $key)
        {
-           $value = trim($_POST[$key])
-            if(!has_presence($value))
+           $value = trim($_POST[$key]);
+            if(has_presence($value) === false)
             {
                 $errors[$key] = upperfirst($key) . "should not be blank.";
             }
