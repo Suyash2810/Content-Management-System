@@ -34,8 +34,32 @@
 
    function validate_maximum_length($max_lengths_assoc)
    {
-       
+       global $errors;
+
+       foreach($max_lengths_assoc as $key => $maxi)
+       {
+         $value = trim($_POST[$key]);
+
+          if(!has_max_length($value,$max))
+            {
+                 $errors[$key] = ucfirst($key) . " is too long.";
+            }
+
+       }
    }
 
+   function validate_has_presences($has_presence_array)
+   {
+       global $errors;
+
+       foreach($has_presence_array as $key)
+       {
+           $value = trim($_POST[$key])
+            if(!has_presence($value))
+            {
+                $errors[$key] = ucfirst($key) . "should not be blank.";
+            }
+       }
+   }
  
 ?>
