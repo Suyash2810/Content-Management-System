@@ -70,5 +70,29 @@
             }
        }
    }
+
+   function print_errors($errors = array())
+   {
+      $output = "";
+
+      if(!empty($errors))
+      {
+        $output .= "
+         <div class=\"alert alert-danger\">
+            <p class=\"text-center text-capitalize\"> 
+             ";
+
+
+          foreach($errors as $key => $value)
+          {
+              $output .= $key . " : " . $value . "<br>";
+          }
+      
+
+        $output .= "</p>
+                </div>";
+      }
+       return $output;
+    }
  
 ?>

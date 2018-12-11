@@ -2,7 +2,7 @@
 <?php require_once('../Includes/widget_corp/db_connect.php'); ?>
 <?php require_once('../Includes/functions.php'); ?>
 <?php include('../Includes/templates/header.php'); ?>
-
+<?php require_once('../Includes/widget_corp/validations.php'); ?>
 <?php get_selected_subject_page();?>
 
 <?php 
@@ -163,7 +163,17 @@
                                                                 </div>
                                                          </div> 
                                                     </form>
-                                                </div>                
+                                                    <!-- Printing the errors encountered in the input. -->
+
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <!-- PHP code to print errors by using session. -->
+                                                            <?php $errors_list = errors();
+                                                                    echo print_errors($errors_list);
+                                                            ?>
+                                                        </div>
+                                                    </div>
+                                                </div> 
                                             </div>
                                         </div>
                                 </div>
