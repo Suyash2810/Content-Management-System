@@ -1,5 +1,7 @@
 <?php 
  
+ $errors = array();
+
   function has_presence($value)
    {
     if(isset($value) && $value !=='')
@@ -32,6 +34,13 @@
        {return false;}
    }
 
+   function upperfirst($name)
+   {
+       $new_name = str_replace("_"," ",$name);
+       $new_name = ucfirst($new_name);
+       return $new_name;
+   }
+
    function validate_maximum_length($max_lengths_assoc)
    {
        global $errors;
@@ -42,7 +51,7 @@
 
           if(!has_max_length($value,$max))
             {
-                 $errors[$key] = ucfirst($key) . " is too long.";
+                 $errors[$key] = upperfirst($key) . " is too long.";
             }
 
        }
@@ -57,7 +66,7 @@
            $value = trim($_POST[$key])
             if(!has_presence($value))
             {
-                $errors[$key] = ucfirst($key) . "should not be blank.";
+                $errors[$key] = upperfirst($key) . "should not be blank.";
             }
        }
    }

@@ -9,6 +9,9 @@
         $output .= htmlentities($_SESSION["message"]);
         $output .= "</div>";
         }
+        else{
+            $output = null;
+        }
 
         $_SESSION["message"] = null;
         return $output;
