@@ -3,7 +3,7 @@
 
     function message_subject(){
 
-        if($_SESSION["message"]){
+        if(isset($_SESSION["message"])){
         
         $output = "<div class = \"text-center text-capitalize text-bold\" id = \"message_text\">";
         $output .= htmlentities($_SESSION["message"]);
@@ -19,7 +19,7 @@
 
     function errors()
     {
-        if($_SESSION["errors"]){
+        if(isset($_SESSION["errors"])){
         
             $errors = $_SESSION["errors"];
 
