@@ -13,6 +13,8 @@
 <?php 
     if(!$clicked_subject_id)
     {
+        /* For being able to edit the subject in the database we need the subject id and in case
+        if it is not present then we redirect the page.*/
         redirection("manage_content.php");
     }
 ?>
@@ -82,7 +84,7 @@
                         <div class="well" id="inner2" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="200">
                             <div class="col-md-8 col-md-offset-2">
                                 <h2>Manage Content</h2>
-                                <h4 style="margin-top:5%;">Add new subject.</h4>
+                                <h4 style="margin-top:5%;">Edit existing subject.</h4>
                                 <br>
                                 <div id="list">
                                         <div class="well">
@@ -151,7 +153,7 @@
                                                             <div class="row">
                                                                 <div class="form-group">
                                                                     <div class="col-md-2 col-md-offset-2 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1">
-                                                                    <label for="create">Create </label>
+                                                                    <label for="Edit">Edit </label>
                                                                     </div>
                                                                     <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4">
                                                                         <input type="submit" class="form-control" name="submit" style="background-color:transparent;color:white;">
@@ -162,7 +164,7 @@
                                                          <div class="row">
                                                                 <div class="form-group">
                                                                     <div class="col-md-2 col-md-offset-2 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1">
-                                                                    <label for="create">Cancel </label>
+                                                                    <label for="Edit">Cancel </label>
                                                                     </div>
                                                                     <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4">
                                                                         <a href="./manage_content.php" class="btn btn-block btn-default" style="background-color:transparent;color:white;">Cancel</a>
