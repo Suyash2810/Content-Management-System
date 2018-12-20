@@ -78,7 +78,8 @@
       if(!empty($errors))
       {
         $output .= "
-         <div class=\"alert alert-danger\">
+         <div class=\"alert alert-danger alert-dissmissible\">
+            <a class=\"close\" data-dismiss=\"alert\" href=\"#\">&times</a>
             <p class=\"text-center text-capitalize\"> 
              ";
 
