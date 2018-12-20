@@ -98,7 +98,7 @@
                                                                     <label for="name">Name </label>
                                                                     </div>
                                                                     <div class="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
-                                                                        <input type="text" class="form-control" placeholder="Menu Name" name="menu_name"
+                                                                        <input type="text" class="form-control" placeholder="<?php echo $subject_has_clicked["menu_name"];?>" name="menu_name"
                                                                          style="background-color:transparent;color:black;">
                                                                     </div>
                                                                 </div>
@@ -116,7 +116,12 @@
                                                                                 $subject_counter = mysqli_num_rows($subject_assoc_array);
                                                                                 for($i = 1; $i<= $subject_counter+1; $i++)
                                                                                 {
-                                                                                    echo "<option value=\"{$i}\" style = \"background-color:transparent;\">{$i}</option>";
+                                                                                    echo "<option value=\"{$i}\" style = \"background-color:transparent;\" ";
+                                                                                    if($subject_has_clicked["position"] == $i)
+                                                                                    {
+                                                                                        echo " selected";
+                                                                                    }
+                                                                                    echo ">{$i}</option>";
                                                                                 }
                                                                             ?>
                                                                         </select>
@@ -136,14 +141,16 @@
                                                                                 <div class="row">
                                                                                     <div class="col-md-6 col-sm-6 col-xs-6">Yes </div>
                                                                                     <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1">
-                                                                                    <input type="radio" name="radio_button" value="1"></div>
+                                                                                    <input type="radio" name="radio_button" value="1" <?php if($subject_has_clicked["visible"] == 
+                                                                                    1){echo "checked";}?>></div>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6 col-sm-6 col-xs-6">
                                                                                 <div class="row">
                                                                                     <div class="col-md-6 col-sm-6 col-xs-6">No </div>
                                                                                     <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1">
-                                                                                    <input type="radio" name="radio_button" value="0"></div>
+                                                                                    <input type="radio" name="radio_button" value="0" <?php if($subject_has_clicked["visible"] == 
+                                                                                    0){echo "checked";}?>></div>
                                                                                 </div>
                                                                         </div>
                                                                     </div>
