@@ -49,7 +49,7 @@
        {
          $value = trim($_POST[$key]);
 
-          if(!has_max_length($value,$max))
+          if(!has_max_length($value,$maxi))
             {
                  $errors[$key] = upperfirst($key) . " is too long.";
             }

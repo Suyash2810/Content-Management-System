@@ -18,6 +18,56 @@
         redirection("manage_content.php");
     }
 ?>
+
+    <?php 
+        $errors = [];
+        $message = "";
+        if(isset($_POST['submit']))
+        {
+            //When the submit button is clicked
+
+            $menu_name = $_POST["menu_name"];
+            $position = (int)$_POST["position"];
+            $visible = (int)$_POST["radio_button"];
+            $id = $clicked_subject_id;
+            //Checking for Validations.
+            $required_fields = array("menu_name","position","radio_button");
+            validate_has_presences($required_fields);
+
+            $max_length_array = array("menu_name" => 20);
+            validate_maximum_length($max_length_array);
+
+            if(empty($errors))
+            {   
+                $menu_name = mysql_secure($menu_name);
+
+                $query = "UPDATE subjects ";
+                $query .= "SET menu_name = '{$menu_name}', ";
+                $query .= "position = {$position}, ";
+                $query .= "visible = {$visible} ";
+                $query .= "WHERE id = {$id} ";
+                $query .= "LIMIT 1";
+                
+                $result = mysqli_query($connection,$query);
+
+                if(!$result){
+                    $message = "There has been an error! Subject was not updated.";
+                }
+                else{
+                    if(mysqli_affected_rows($connection) == 1)
+                    {
+                        $_SESSION["message"] = "Subject was updated.";
+                        redirection("manage_content.php");
+                    }
+                }
+            }
+        }
+        else
+        {
+            //Redirecting simply to the same page.
+        }
+    ?>
+
     <div class="container-fluid">
         <div class="well" id="main_well">
             <div class="row">
@@ -91,7 +141,7 @@
                                         <div class="well">
                                             <div class="row">
                                                 <div class="col-md-12" id="form_data">
-                                                    <form action="./create_new_subject.php" method="post">
+                                                    <form action="./edit_subject.php?subject=<?php echo $subject_has_clicked["id"];?>" method="post">
                                                          <div class="row">
                                                                 <div class="form-group">
                                                                     <div class="col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-2 col-xs-offset-1">
@@ -184,10 +234,9 @@
 
                                                     <div class="row">
                                                         <div class="col-md-12">
+                                                            <?php echo $message;?>
                                                             <!-- PHP code to print errors by using session. -->
-                                                            <?php $errors_list = errors();
-                                                                    echo print_errors($errors_list);
-                                                            ?>
+                                                            <?php echo print_errors($errors);?>
                                                         </div>
                                                     </div>
                                                 </div> 

@@ -1,1 +1,2 @@
 1. Rectify the errors being displayed while opening the form.
+2. Rectify the errors being displayed after updating the form successfully and redirecting to manage_content.php
