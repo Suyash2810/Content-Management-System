@@ -84,7 +84,8 @@
                         <div class="well" id="inner2" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="200">
                             <div class="col-md-8 col-md-offset-2">
                                 <h2>Manage Content</h2>
-                                <h4 style="margin-top:5%;">Edit existing subject.</h4>
+                                <?php $subject_has_clicked = get_oneSubject_by_id($clicked_subject_id);?>
+                                <h4 style="margin-top:5%;">Edit existing subject: <?php echo $subject_has_clicked["menu_name"];?></h4>
                                 <br>
                                 <div id="list">
                                         <div class="well">
