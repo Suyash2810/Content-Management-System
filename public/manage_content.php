@@ -87,17 +87,21 @@
                                             $output_result = get_oneSubject_by_id($clicked_subject_id);
                                             ?>
                                             <p class="text-center">
-                                               Menu Name : <?php echo $output_result["menu_name"]?>
+                                               Menu Name : <?php echo htmlspecialchars($output_result["menu_name"]);?>
+                                               <br>
+                                               Position : <?php echo htmlspecialchars($output_result["position"]);?>
+                                               <br>
+                                               Visible : <?php echo $output_result["visible"] == 1? "Yes" : "No";?>
                                             </p>
                                         <?php
                                         } elseif(isset($clicked_page_id)){
                                            $output_result_page = get_onePgae_by_id($clicked_page_id);
                                            ?>
                                                 <p class="text-center">
-                                                    Page Name : <?php echo $output_result_page["menu_name"]?>
+                                                    Page Name : <?php echo htmlspecialchars($output_result_page["menu_name"]);?>
                                                     <br>
                                                     <br>
-                                                    Brief Content : <?php echo $output_result_page["content"] ?>
+                                                    Brief Content : <?php echo htmlspecialchars($output_result_page["content"]); ?>
 
                                                 </p>
                                         <?php
