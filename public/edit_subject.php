@@ -229,6 +229,17 @@
                                                                     </div>
                                                                 </div>
                                                          </div> 
+
+                                                         <div class="row">
+                                                                <div class="form-group">
+                                                                    <div class="col-md-2 col-md-offset-2 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1">
+                                                                    <label for="Edit">Delete </label>
+                                                                    </div>
+                                                                    <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4">
+                                                                        <a href="./delete_subject.php?subject=<?php echo $clicked_subject_id?>" class="btn btn-block btn-default" style="background-color:transparent;color:white;">Delete</a>
+                                                                    </div>
+                                                                </div>
+                                                         </div> 
                                                     </form>
                                                     <!-- Printing the errors encountered in the input. -->
 
