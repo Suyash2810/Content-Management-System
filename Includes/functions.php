@@ -23,7 +23,7 @@
 
         return $result;
     }
-
+    //Function for getting the pages for a particular subject.
     function get_pages($page_id){
         global $connection;
 

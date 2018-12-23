@@ -236,7 +236,7 @@
                                                                     <label for="Edit">Delete </label>
                                                                     </div>
                                                                     <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4">
-                                                                        <a href="./delete_subject.php?subject=<?php echo $clicked_subject_id?>" class="btn btn-block btn-default" style="background-color:transparent;color:white;">Delete</a>
+                                                                        <a href="./delete_subject.php?subject=<?php echo $clicked_subject_id?>" class="btn btn-block btn-default" style="background-color:transparent;color:white;" onclick="return confirm('Are you sure?');">Delete</a>
                                                                     </div>
                                                                 </div>
                                                          </div> 

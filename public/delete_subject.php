@@ -14,6 +14,14 @@
         redirection("manage_content.php");
     }
 
+    $pages_list = get_pages($current_sub["id"]);
+
+    if(mysqli_num_rows($pages_list)>0)
+    {
+        $message = "Deletion the pages first.";
+          $_SESSION["message"] = $message;
+          redirection("manage_content.php");
+    }
 
     /* When there is no error encountered regarding the existance of a particular subject.
       Then we will perform the query to delete that same subject from the database.*/
