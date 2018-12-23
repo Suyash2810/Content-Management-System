@@ -245,7 +245,7 @@
 
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <?php echo $message;?>
+                                                            <?php echo htmlspecialchars($message);?>
                                                             <!-- PHP code to print errors by using session. -->
                                                             <?php echo print_errors($errors);?>
                                                         </div>

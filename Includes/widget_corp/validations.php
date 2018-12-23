@@ -86,7 +86,7 @@
 
           foreach($errors as $key => $value)
           {
-              $output .= $key . " : " . $value . "<br>";
+              $output .= htmlspecialchars($key) . " : " . htmlspecialchars($value) . "<br>";
           }
       
 

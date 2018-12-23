@@ -100,8 +100,12 @@
                                                 <p class="text-center">
                                                     Page Name : <?php echo htmlspecialchars($output_result_page["menu_name"]);?>
                                                     <br>
+                                                    Position : <?php echo htmlspecialchars($output_result_page["position"]);?>
                                                     <br>
-                                                    Brief Content : <?php echo htmlspecialchars($output_result_page["content"]); ?>
+                                                    Visible : <?php echo $output_result_page["visible"] == 1? "Yes" : "No" ; ?>
+                                                    <br><br>
+                                                    &nbsp;
+                                                    Content : <?php echo htmlspecialchars($output_result_page["content"]);?>
 
                                                 </p>
                                         <?php
