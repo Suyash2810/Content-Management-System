@@ -54,7 +54,7 @@
                     $message = "There has been an error! Subject was not updated.";
                 }
                 else{
-                    if(mysqli_affected_rows($connection) == 1)
+                    if(mysqli_affected_rows($connection) >= 0)
                     {
                         $_SESSION["message"] = "Subject was updated.";
                         redirection("manage_content.php");
