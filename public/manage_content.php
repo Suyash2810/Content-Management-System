@@ -64,7 +64,7 @@
                                             <?php } ?> 
 
                                             <br>
-
+                                            <li><a href="admin.php" style="color:white;text-decoration:none;">&laquo; Main Menu</a></li>
                                             <li><a href="./new_subject.php" style="color:white;text-decoration:none;
                                             "> + Add new subject</a></li>             
                                     </ul>
