@@ -112,11 +112,15 @@
 
                                         <?php echo message_subject(); ?>
                                         <br>
-
+                                        <?php if(isset($output_result["id"]))
+                                            {
+                                        ?>
                                         <h3 class="text-center text-default"> 
                                               <a href="./edit_subject.php?subject=<?php echo $output_result["id"];?>" 
                                               style="color:white;text-decoration:none;">Edit Subject &hearts;</a>  
                                         </h3>
+
+                                        <?php } ?>
                                 </div>
                             </div>
                         </div>
