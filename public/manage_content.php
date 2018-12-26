@@ -131,18 +131,26 @@
                                         <?php } ?>
 
                                         <br><br>
-                                        <hr>
-                                    
+                                        
+                                            <?php 
+                                                if(isset($clicked_subject_id))
+                                                { ?>
+                                                    <hr>
+                                                    <h2 class="text-center">Pages in this subject.</h2>
+                                                    <hr style="width:65px;">
+                                                <?php } ?>
+                                                
+                                                <br>
                                         <?php 
                                             if(isset($clicked_subject_id)){
                                                 $pages_result = get_pages($clicked_subject_id);?>
                                                 
-                                                <ul>
+                                                <ul class="text-center" style="list-style-type:none;">
                                                     <?php 
                                                         while($page_row = mysqli_fetch_assoc($pages_result))
                                                         {
                                                             ?>
-                                                                <li><a href="#"><?php echo htmlspecialchars($page_row["menu_name"]) ?></a></li>
+                                                                <li><a href="./manage_content.php?page=<?php echo urlencode($page_row["id"]);?>"><?php echo ">> &nbsp;" . htmlspecialchars($page_row["menu_name"]) ?></a></li>
 
                                                         <?php } ?>
                                                 
