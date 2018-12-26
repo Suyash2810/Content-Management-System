@@ -130,7 +130,7 @@
 
                                         <?php } ?>
 
-                                        <br><br>
+                                        <br>
                                         
                                             <?php 
                                                 if(isset($clicked_subject_id))
@@ -140,7 +140,7 @@
                                                     <hr style="width:65px;">
                                                 <?php } ?>
                                                 
-                                                <br>
+                                                
                                         <?php 
                                             if(isset($clicked_subject_id)){
                                                 $pages_result = get_pages($clicked_subject_id);?>
@@ -155,8 +155,11 @@
                                                         <?php } ?>
                                                 
                                                 </ul>
+                                                <br>
+                                                <h3 class="text-center"><a style="text-decoration:none;color:white;"
+                                                href="new_page.php?subject=<?php echo urlencode($clicked_subject_id);?>">+ Add a new page to the subject.</a></h3>
                                         <?php } ?>
-                                
+                                            
                                 </div>
                             </div>
                         </div>
