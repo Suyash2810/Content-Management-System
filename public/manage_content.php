@@ -129,6 +129,26 @@
                                         </h3>
 
                                         <?php } ?>
+
+                                        <br><br>
+                                        <hr>
+                                    
+                                        <?php 
+                                            if(isset($clicked_subject_id)){
+                                                $pages_result = get_pages($clicked_subject_id);?>
+                                                
+                                                <ul>
+                                                    <?php 
+                                                        while($page_row = mysqli_fetch_assoc($pages_result))
+                                                        {
+                                                            ?>
+                                                                <li><a href="#"><?php echo htmlspecialchars($page_row["menu_name"]) ?></a></li>
+
+                                                        <?php } ?>
+                                                
+                                                </ul>
+                                        <?php } ?>
+                                
                                 </div>
                             </div>
                         </div>
