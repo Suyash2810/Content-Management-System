@@ -104,7 +104,7 @@
                                                         <div class="col-md-4  col-sm-4  col-xs-4">
                                                             <select class="form-control" name="position" style="background-color:transparent;color:black;">
                                                                 <?php 
-                                                                                $subject_assoc_array = get_pages();
+                                                                                $subject_assoc_array = get_pages($_GET["subject"]);
                                                                                 $subject_counter = mysqli_num_rows($subject_assoc_array);
                                                                                 for($i = 1; $i<= $subject_counter+1; $i++)
                                                                                 {
@@ -195,7 +195,7 @@
                                                     </div>
                                             </form>
                                             <!-- Printing the errors encountered in the input. -->
-
+                                                
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <!-- PHP code to print errors by using session. -->
