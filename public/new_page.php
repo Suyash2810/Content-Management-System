@@ -83,7 +83,7 @@
                                 <div class="well">
                                     <div class="row">
                                         <div class="col-md-12" id="form_data">
-                                            <form action="./create_new_subject.php" method="post">
+                                            <form action="./create_new_page.php?subject=<?php echo urlencode($_GET["subject"]);?>" method="post">
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <div class="col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-2 col-xs-offset-1">
@@ -148,10 +148,10 @@
 
                                                     <div class="row">
                                                         <div class="form-group">
-                                                            <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1" style="background-color:cyan;">
+                                                            <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
                                                                 <div class="row">
-                                                                    <div class="col-md-6 col-md-offset-3 col-xs-8 col-xs-offset-2" style="background-color:green;">
-                                                                        <div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3" style="background-color:pink;">
+                                                                    <div class="col-md-6 col-md-offset-3 col-xs-8 col-xs-offset-2">
+                                                                        <div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
                                                                             <div class="row">
                                                                                 <div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
                                                                                      <label for="name">Content</label>
@@ -162,7 +162,7 @@
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-md-10 col-md-offset-1 col-xs-8 col-xs-offset-2">
-                                                                        <textarea name="content" id="content_area" cols="40" rows="4" style="background-color:transparent;border:1px solid gray;"></textarea>
+                                                                        <textarea name="content" id="content_area" cols="40" rows="3" style="background-color:transparent;border:1px solid whitesmoke;"></textarea>
                                                                     </div>
                                                                 </div>
                                                             </div>
