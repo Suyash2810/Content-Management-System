@@ -107,6 +107,9 @@
                                                     &nbsp;
                                                     Content : <?php echo htmlspecialchars($output_result_page["content"]);?>
 
+                                                    <h3 class="text-center"><a style="text-decoration:none;color:white;"
+                                                href="edit_page.php?subject=<?php echo urlencode($clicked_subject_id);?>& page=<?php echo urlencode($clicked_page_id);?>"> ->  Edit a page for the subject.</a></h3>
+                                                <!-- Have to pass the subject id and page id. -->
                                                 </p>
                                         <?php
                                         }else{

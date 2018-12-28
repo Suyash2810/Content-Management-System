@@ -20,12 +20,12 @@
                 $errors["Menu Name"] = "Menu Name cannot be empty.";
             }
 
-            if($position === '')
+            if($position === '' || !isset($position))
             {
                 $errors["Position"] = "Position cannot be empty.";
             }
 
-            if($visible === '')
+            if($visible === '' || !isset($visible))
             {
                 $errors["Visible"] = "Visible cannot be empty.";
             }
