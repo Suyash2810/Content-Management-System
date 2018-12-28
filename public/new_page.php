@@ -37,7 +37,7 @@
                                         ?>
 
                                     <li>
-                                        <a href="manage_content.php?subject=<?php echo urlencode($key[" id"]) ;?>"
+                                        <a href="manage_content.php?subject=<?php echo urlencode($key["id"]) ;?>"
                                             style="color:white;text-decoration:none;"
                                             >
                                             <?php echo $key["menu_name"] ;?></a>
@@ -52,8 +52,7 @@
                                                 <?php 
                                                              while($list_item = mysqli_fetch_assoc($result_list)){
                                                              ?>
-                                                <a href="manage_content.php?page=<?php echo urlencode($list_item["
-                                                    id"]) ;?>"
+                                                <a href="manage_content.php?page=<?php echo urlencode($list_item["id"]) ;?>"
                                                     style="color:white;text-decoration:none;"
                                                     id="inner_links">
                                                     <?php  echo $list_item['menu_name'] ;?></a>
@@ -105,7 +104,7 @@
                                                         <div class="col-md-4  col-sm-4  col-xs-4">
                                                             <select class="form-control" name="position" style="background-color:transparent;color:black;">
                                                                 <?php 
-                                                                                $subject_assoc_array = get_subjects();
+                                                                                $subject_assoc_array = get_pages();
                                                                                 $subject_counter = mysqli_num_rows($subject_assoc_array);
                                                                                 for($i = 1; $i<= $subject_counter+1; $i++)
                                                                                 {
@@ -149,19 +148,23 @@
 
                                                     <div class="row">
                                                         <div class="form-group">
-                                                            <div class="col-md-10 col-md-offset-1">
+                                                            <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1" style="background-color:cyan;">
                                                                 <div class="row">
-                                                                    <div class="col-md-12" style="background-color:green;">
-                                                                        <div class="col-md-4 col-md-offset-4" style="background-color:pink;">
+                                                                    <div class="col-md-6 col-md-offset-3 col-xs-8 col-xs-offset-2" style="background-color:green;">
+                                                                        <div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3" style="background-color:pink;">
                                                                             <div class="row">
-                                                                                <div class="col-md-6 col-md-offset-3">
-                                                                                     <label for="name">Content </label>
+                                                                                <div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
+                                                                                     <label for="name">Content</label>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="row"></div>
+                                                                <div class="row">
+                                                                    <div class="col-md-10 col-md-offset-1 col-xs-8 col-xs-offset-2">
+                                                                        <textarea name="content" id="content_area" cols="40" rows="4" style="background-color:transparent;border:1px solid gray;"></textarea>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
