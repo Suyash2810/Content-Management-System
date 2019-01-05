@@ -7,7 +7,7 @@
 <?php get_selected_subject_page();?>
 
 <?php 
-    $result = get_subjects();
+    $result = get_subjects_public();
     check_queryStatus($result);
 ?>
     <div class="container-fluid">
@@ -43,7 +43,7 @@
                                                 ><?php echo $key["menu_name"] ;?></a>        
 
                                                 <?php 
-                                                    $result_list = get_pages($key["id"]);
+                                                    $result_list = get_pages_public($key["id"]);
 
                                                     check_queryStatus($result_list);
                                                 ?>
