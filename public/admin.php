@@ -1,4 +1,5 @@
 <?php require_once('../Includes/functions.php'); ?>
+<?php $context_layout = "Tech Corp Admin";?>
 <?php include('../Includes/templates/header.php'); ?>
     <div class="container-fluid">
         <div class="well" id="main_well">
