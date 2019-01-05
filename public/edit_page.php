@@ -1,6 +1,7 @@
 <?php require_once('../Includes/widget_corp/session.php'); ?>
 <?php require_once('../Includes/widget_corp/db_connect.php'); ?>
 <?php require_once('../Includes/functions.php'); ?>
+<?php $context_layout = "Tech Corp Admin";?>
 <?php include('../Includes/templates/header.php'); ?>
 <?php require_once('../Includes/widget_corp/validations.php'); ?>
 <?php get_selected_subject_page();?>
