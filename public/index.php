@@ -94,7 +94,7 @@
                                                         ?>
                                                         Page Name:  <?php echo htmlspecialchars($clicked_page_id["menu_name"]);?>
                                                         <br><br>
-                                                        Content: <?php echo htmlspecialchars($clicked_page_id["content"]);?>                                                        
+                                                        Content: <?php echo nl2br(htmlspecialchars($clicked_page_id["content"]));?>                                                        
                                                 <?php  } ?>                                 
                                             </p>
                                         <?php
@@ -105,14 +105,14 @@
                                                     Page Name : <?php echo htmlspecialchars($output_result_page["menu_name"]);?>
                                                     <br><br>
                                                     &nbsp;
-                                                    Content : <?php echo htmlspecialchars($output_result_page["content"]);?>
+                                                    Content : <?php echo nl2br(htmlspecialchars($output_result_page["content"]));?>
                                                 </p>
                                         <?php
                                         }else{
                                           ?>
                                             <h4 class="display-4 text-center">
                                                 <?php 
-                                                    echo "Please select page from the panel.";
+                                                    echo "Welcome.";
                                                 ?>
                                             </h4>  
                                         <?php } ?>                                                                               
