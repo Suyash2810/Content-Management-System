@@ -116,6 +116,10 @@
         {
             $clicked_subject_id = $_GET["subject"];
             $clicked_page_id = get_default_page_for_subject_selected($clicked_subject_id);
+            if($clicked_page_id["visible"] == 0)
+            {
+                $clicked_page_id = null;
+            }
         }
         elseif(isset($_GET["page"]))
         {
