@@ -88,7 +88,14 @@
                                             ?>
                                             <p class="text-center">
                                                Menu Name : <?php echo htmlspecialchars($output_result["menu_name"]);?>
-                                               <br>                                        
+                                               <br><br>      
+                                               <?php 
+                                                    if(isset($clicked_page_id)){
+                                                        ?>
+                                                        Page Name:  <?php echo htmlspecialchars($clicked_page_id["menu_name"]);?>
+                                                        <br><br>
+                                                        Content: <?php echo htmlspecialchars($clicked_page_id["content"]);?>                                                        
+                                                <?php  } ?>                                 
                                             </p>
                                         <?php
                                         } elseif(isset($clicked_page_id)){

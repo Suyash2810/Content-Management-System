@@ -98,6 +98,16 @@
         }
     }
 
+    function get_default_page_for_subject_selected($subject){
+        $pages_list = get_pages($subject);
+        if($first_page = mysqli_fetch_assoc($pages_list))
+        {
+            return $first_page;
+        }
+        else
+        return null;
+    }
+
     function get_selected_subject_page(){
         global $clicked_subject_id;
         global $clicked_page_id;
@@ -105,7 +115,7 @@
         if(isset($_GET["subject"]))
         {
             $clicked_subject_id = $_GET["subject"];
-            $clicked_page_id = null;
+            $clicked_page_id = get_default_page_for_subject_selected($clicked_subject_id);
         }
         elseif(isset($_GET["page"]))
         {
