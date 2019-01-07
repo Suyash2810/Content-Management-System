@@ -149,4 +149,15 @@
         $secured_string = mysqli_real_escape_string($connection,$string);
         return $secured_string;
     }
+
+    function get_admins(){
+       global $connection;
+
+       $query = "SELECT * ";
+       $query .= "FROM admins ";
+
+       $names_result = mysqli_query($connection,$query);
+
+       return $names_result;
+    }
 ?>
