@@ -10,6 +10,7 @@
             //When the submit button is clicked
             $username = $_POST["username"];
             $password = $_POST["password"];
+            $id = $_GET["id"];
             
             if($username === '')
             {
@@ -25,28 +26,30 @@
             {   $_SESSION["errors"] = $errors;
                 /*Session key will return an associative array of errors encountered which will be displayed
                 on new_subject.php page after redirection.*/
-                redirection("new_admin.php");
+                redirection("edit_admin.php");
             }
             
             $username = mysql_secure($username);
 
-            $query = "INSERT INTO admins (username, hashed_password) ";
-            $query .= "VALUES ( '{$username}', '{$password}' ) ";
+            $query = "UPDATE admins ";
+            $query .= "SET username = '{$username}', ";
+            $query .= "hashed_password = '{$password}' ";
+            $query .= "WHERE id = {$id} ";
             
             $result = mysqli_query($connection,$query);
 
             if(!$result){
-                $_SESSION["message"] = "There has been an error! Admin was not added.";
+                $_SESSION["message"] = "There has been an error! Admin was not updated.";
                 redirection("manage_admins.php");
             }
             else{
-                $_SESSION["message"] = "Admin was added.";
+                $_SESSION["message"] = "Admin was updated.";
                 redirection("manage_admins.php");
             }
         }
         else
         {
-            redirection("new_admin.php");
+            redirection("edit_admin.php");
         }
     ?>
 <?php mysqli_close($connection);?>

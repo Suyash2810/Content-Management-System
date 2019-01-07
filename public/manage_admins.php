@@ -3,6 +3,7 @@
 <?php require_once('../Includes/functions.php'); ?>
 <?php $context_layout = "Tech Corp Admin";?>
 <?php include('../Includes/templates/header.php'); ?>
+<?php require_once('../Includes/widget_corp/validations.php'); ?>
 
     <div class="container-fluid">
         <div class="well" id="main_well">
@@ -51,6 +52,16 @@
                                             <br><br>
 
                                             <p class="text-center"><a href="new_admin.php" style="color:white;text-decoration:none;">+ Add new Admin</a></p>
+
+                                            <br><br>
+
+                                            <?php 
+                                                if(isset($_SESSION["message"])){
+                                                    ?>
+                                                    <p class="text-center"><?php echo htmlspecialchars($_SESSION["message"]);?></p>
+                                                    
+                                            <?php   $_SESSION["message"] = null; }
+                                            ?>
                                         </div>
                                     </div>                                           
                                 </div>
