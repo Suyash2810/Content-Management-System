@@ -4,12 +4,6 @@
 <?php $context_layout = "Tech Corp Admin";?>
 <?php include('../Includes/templates/header.php'); ?>
 
-<?php get_selected_subject_page();?>
-
-<?php 
-    $result = get_subjects();
-    check_queryStatus($result);
-?>
     <div class="container-fluid">
         <div class="well" id="main_well">
             <div class="row">
@@ -53,6 +47,10 @@
                                                         </div>
                                                    <?php } ?>
                                             </div>
+
+                                            <br><br>
+
+                                            <p class="text-center"><a href="new_admin.php" style="color:white;text-decoration:none;">+ Add new Admin</a></p>
                                         </div>
                                     </div>                                           
                                 </div>
