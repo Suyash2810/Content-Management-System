@@ -192,4 +192,41 @@
             return false;
         }
     }
+
+    function find_admin_by_username($username)
+    {
+        global $connection;
+        $safe_username = mysqli_real_escape_string($connection, $username);
+        $query = "SELECT * ";
+        $query .= "FROM admins ";
+        $query .= "WHERE username = '{$safe_username}' ";
+
+        $names_result = mysqli_query($connection,$query);
+        $result = mysqli_fetch_assoc($names_result);
+        return $result;
+
+    }
+
+    function check_for_admin($username, $password){
+        $admin = find_admin_by_username($username);
+
+        if($admin)
+        {
+            // Now we will check for the password equality as username has been found.
+
+            $check_pass = check_password_equality($password, $admin["hashed_password"]);
+
+            if($check_pass)
+            {
+                return $admin;
+            }
+            else{
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
 ?>

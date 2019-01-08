@@ -1,3 +1,4 @@
+<?php require_once('../Includes/widget_corp/session.php'); ?>
 <?php require_once('../Includes/functions.php'); ?>
 <?php $context_layout = "Tech Corp Admin";?>
 <?php include('../Includes/templates/header.php'); ?>
@@ -34,6 +35,12 @@
                             <div class="col-md-8 col-md-offset-2">
                                 <h2>Admin Menu</h2>
                                 <h6 style="margin-top:5%;">Welcome to the admin area.</h6>
+                                <h6><?php 
+                                    if(isset($_SESSION["username"]))
+                                    {
+                                        echo htmlspecialchars($_SESSION["username"]);
+                                    }
+                                ?></h6>
                                 <div id="list">
                                     <ul>
                                         <li><a href="./manage_content.php">Manage Website Content</a></li>
