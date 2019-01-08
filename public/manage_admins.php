@@ -52,7 +52,6 @@
                                             <br><br>
 
                                             <p class="text-center"><a href="new_admin.php" style="color:white;text-decoration:none;">+ Add new Admin</a></p>
-
                                             <br><br>
 
                                             <?php 

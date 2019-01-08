@@ -160,4 +160,36 @@
 
        return $names_result;
     }
+
+    function password_encrypt($pass){
+        $hash_format = "$2y$10$";
+        // Here blowfish algorithm is being used therefore the salt length should be 22 characters or more.
+        $salt_length = 22;
+        //Here we are generating a random salt using a function.
+        $salt = generate_random_salt($salt_length);
+        $format_and_salt = $hash_format . $salt;
+        $hash = crypt($pass, $format_and_salt);
+        return $hash;
+    }
+
+    function generate_random_salt($length){
+
+        $unique_random_string = md5(uniqid(mt_rand(),true));
+        $base64_string = base64_encode($unique_random_string);
+        $modified_string = str_replace("+", ".", $base64_string);
+        $salt = substr($modified_string, 0, $length);
+
+        return $salt;
+    }
+
+    function check_password_equality($password, $existing_hash_password){
+        $check = crypt($password,$existing_hash_password);
+        if($check === $existing_hash_password)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 ?>

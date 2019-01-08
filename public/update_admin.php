@@ -9,7 +9,7 @@
         {
             //When the submit button is clicked
             $username = $_POST["username"];
-            $password = $_POST["password"];
+            $password = password_encrypt($_POST["password"]);
             $id = $_GET["id"];
             
             if($username === '')
