@@ -21,6 +21,7 @@
                     <div class="row">
                         <div class="well" id="inner" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="100">
                             <!-- Has to remain blank for this page. -->
+                            <a href="admin.php" style="color:white;text-decoration:none;font-size:32px;">&laquo; Main Menu</a>
                         </div>
                     </div>
                 </div>
