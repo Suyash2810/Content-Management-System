@@ -229,4 +229,18 @@
             return false;
         }
     }
+
+    function logged_in_user(){
+        if(isset($_SESSION["admin_id"]))
+        {return true;}
+        else
+        {return false;}
+    }
+
+    function confirm_admin_logged_in(){
+
+        if(!logged_in_user()){
+            redirection("login_admin.php");
+        }
+    }
 ?>

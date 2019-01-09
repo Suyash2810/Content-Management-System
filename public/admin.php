@@ -1,5 +1,6 @@
 <?php require_once('../Includes/widget_corp/session.php'); ?>
 <?php require_once('../Includes/functions.php'); ?>
+<?php confirm_admin_logged_in();?>
 <?php $context_layout = "Tech Corp Admin";?>
 <?php include('../Includes/templates/header.php'); ?>
     <div class="container-fluid">
