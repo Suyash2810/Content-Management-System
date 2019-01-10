@@ -55,7 +55,7 @@ I have already added the database files in this project. To set up the sql datab
 2. There will be a folder www, put the whole CMS folder there.
 3. The sql files are present in Includes/widget_corp, copy them except the php files.
 4. Open the sql console and create a database.
-5. In the wamp folder go to bin/mysql/mysql-version/data, one will see a folder with the database name, paste all the     files there.
+5. In the wamp folder go to bin/mysql/mysql-version/data, one will see a folder with the database name, paste all the files there.
 6. Great! Good to go.
 ```
 
@@ -75,5 +75,5 @@ Similary open login_admin.php to access the Admin Area of the Content Management
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/Suyash2810/) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/Suyash2810/CMS/blob/master/LICENSE) file for details.
 
