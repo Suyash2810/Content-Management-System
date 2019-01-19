@@ -1,9 +1,9 @@
 <?php 
         //Creating a database connection
         $dbhost = 'localhost';
-        $dbuser = 'root';
-        $dbpass = 'secret';
-        $dbname = 'widget_corp';
+        $dbuser = 'type your user name';
+        $dbpass = 'type your password';
+        $dbname = 'your database name';
 
         $connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
